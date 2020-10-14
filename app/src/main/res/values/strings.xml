@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Managers</string>
+
+    <string name="error_offline">You are offline</string>
+    <string name="error_timeout">Request timed out</string>
+    <string name="error_unauthorised">Unauthorised</string>
+    <string name="error_forbidden">Access Forbidden</string>
+    <string name="error_generic_error_http">Loading data failed - %d - %s</string>
+    <string name="error_generic_error">Loading data failed - %s</string>
 </resources>

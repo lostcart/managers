@@ -4,6 +4,7 @@ import android.view.View
 import androidx.lifecycle.Observer
 import com.lost.domain.models.Manager
 import com.lost.managers.R
+import com.lost.managers.utils.errors.SnackbarErrorVisualiser
 import com.lost.popeat.features.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.managers.*
@@ -15,6 +16,9 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class ManagersFragment : BaseFragment() {
     private val managersAdapter = ManagersAdapter()
+
+    @Inject
+    lateinit var snackbarErrorVisualiser: SnackbarErrorVisualiser
 
     @Inject
     lateinit var viewModel: ManagersViewModel
@@ -38,6 +42,7 @@ class ManagersFragment : BaseFragment() {
     }
 
     private fun showError(throwable: Throwable) {
+        snackbarErrorVisualiser.show(requireView(), throwable)
     }
 
     private fun showManagers(managers: List<Manager>) {
