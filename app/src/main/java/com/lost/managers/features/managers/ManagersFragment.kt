@@ -14,6 +14,8 @@ import javax.inject.Inject
  */
 @AndroidEntryPoint
 class ManagersFragment : BaseFragment() {
+    private val managersAdapter = ManagersAdapter()
+
     @Inject
     lateinit var viewModel: ManagersViewModel
 
@@ -21,6 +23,7 @@ class ManagersFragment : BaseFragment() {
         get() = R.layout.managers
 
     override fun setupViews() {
+        managers_recyclerview.adapter = managersAdapter
     }
 
     override fun setupViewModel() {
@@ -38,6 +41,6 @@ class ManagersFragment : BaseFragment() {
     }
 
     private fun showManagers(managers: List<Manager>) {
-
+        managersAdapter.setManagers(managers)
     }
 }
