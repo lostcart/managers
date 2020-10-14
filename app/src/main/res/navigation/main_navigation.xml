@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/restaurant_fragment">
+
+    <fragment
+        android:id="@+id/restaurant_fragment"
+        android:name="com.lost.managers.features.managers.ManagersFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/managers" />
+</navigation>
