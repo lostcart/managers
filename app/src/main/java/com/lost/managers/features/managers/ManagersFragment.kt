@@ -2,6 +2,7 @@ package com.lost.managers.features.managers
 
 import android.view.View
 import androidx.lifecycle.Observer
+import com.lost.domain.models.Manager
 import com.lost.managers.R
 import com.lost.popeat.features.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
@@ -25,6 +26,8 @@ class ManagersFragment : BaseFragment() {
     override fun setupViewModel() {
         viewModel.isLoading().observe(viewLifecycleOwner, Observer(::showLoading))
         viewModel.error().observe(viewLifecycleOwner, Observer(::showError))
+        viewModel.managersList().observe(viewLifecycleOwner, Observer(::showManagers))
+        viewModel.getManagers()
     }
 
     private fun showLoading(loading: Boolean) {
@@ -32,5 +35,9 @@ class ManagersFragment : BaseFragment() {
     }
 
     private fun showError(throwable: Throwable) {
+    }
+
+    private fun showManagers(managers: List<Manager>) {
+
     }
 }
