@@ -17,7 +17,7 @@ internal class ManagersRepositoryImpl @Inject constructor(
         var managers = managersMapper.mapFrom(source)
         filter?.let {
             managers = managers.filter { manager ->
-                val toCheck = "$manager.name $manager.email"
+                val toCheck = "${manager.name} ${manager.email}"
                 toCheck.contains(it, true)
             }
         }
