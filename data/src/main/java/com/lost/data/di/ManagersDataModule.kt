@@ -22,7 +22,4 @@ abstract class ManagersDataModule {
 
     @Binds
     internal abstract fun bindMemory(impl: ManagersMemoryDataStore): ManagersDataStore.Memory
-
-    @Binds
-    internal abstract fun bindDispatcherProvider(impl: DefaultDispatcherProvider): DispatcherProvider
 }

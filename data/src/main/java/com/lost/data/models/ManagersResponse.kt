@@ -11,8 +11,7 @@ internal data class ManagersResponse(
         val relationships: Relationships
     ) {
         internal data class Attributes(
-            val firstName: String,
-            val lastName: String
+            val name: String
         )
 
         internal data class Relationships(

@@ -7,4 +7,5 @@
     <string name="error_forbidden">Access Forbidden</string>
     <string name="error_generic_error_http">Loading data failed - %d - %s</string>
     <string name="error_generic_error">Loading data failed - %s</string>
+    <string name="filter_hint">Enter name or email to filter</string>
 </resources>

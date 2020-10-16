@@ -3,7 +3,6 @@ package com.lost.managers.features.managers
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.lost.domain.models.Manager
 import com.lost.managers.R
@@ -42,8 +41,7 @@ class ManagersAdapter : RecyclerView.Adapter<ManagersAdapter.ViewHolder?>() {
 
         fun set(manager: Manager) {
             this.manager = manager
-            itemView.managers_item_textview_first_name.text = manager.firstName
-            itemView.managers_item_textview_last_name.text = manager.lastName
+            itemView.managers_item_textview_name.text = manager.name
             itemView.managers_item_textview_email.text = manager.email
         }
     }

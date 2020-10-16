@@ -11,8 +11,7 @@ internal class ManagersMapper @Inject constructor() : Mapper<ManagersResponse?, 
         managersResponse?.let {
             it.data.forEach { data ->
                 managers[data.relationships.account.data.id] = Manager(
-                    data.attributes.firstName,
-                    data.attributes.lastName
+                    data.attributes.name
                 )
             }
             it.included.forEach { included ->

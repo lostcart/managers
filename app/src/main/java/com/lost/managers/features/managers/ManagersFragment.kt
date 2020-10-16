@@ -1,7 +1,9 @@
 package com.lost.managers.features.managers
 
 import android.view.View
+import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
 import com.lost.domain.models.Manager
 import com.lost.managers.R
 import com.lost.managers.utils.errors.SnackbarErrorVisualiser
@@ -35,6 +37,9 @@ class ManagersFragment : BaseFragment() {
         viewModel.error().observe(viewLifecycleOwner, Observer(::showError))
         viewModel.managersList().observe(viewLifecycleOwner, Observer(::showManagers))
         viewModel.getManagers()
+        managers_edittext_filter.addTextChangedListener {
+            viewModel.getManagers(it.toString())
+        }
     }
 
     private fun showLoading(loading: Boolean) {
