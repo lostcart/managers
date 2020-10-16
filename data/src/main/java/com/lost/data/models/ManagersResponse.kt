@@ -5,8 +5,6 @@ internal data class ManagersResponse(
     val included: List<Included>
 ) {
     internal data class Data(
-        val type: String,
-        val id: String,
         val attributes: Attributes,
         val relationships: Relationships
     ) {
@@ -21,13 +19,10 @@ internal data class ManagersResponse(
                 val data: AccountData
             ) {
                 internal data class AccountData(
-                    val type: String,
                     val id: String
                 )
             }
         }
-
-
     }
 
     internal data class Included(
