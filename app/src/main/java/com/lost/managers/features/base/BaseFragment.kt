@@ -1,4 +1,4 @@
-package com.lost.popeat.features.base
+package com.lost.managers.features.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.lost.domain.models.Manager
 import com.lost.domain.usecase.GetManagersUseCase
-import com.lost.popeat.features.base.BaseNetworkViewModel
+import com.lost.managers.features.base.BaseNetworkViewModel
 import dagger.hilt.android.scopes.ActivityScoped
 import kotlinx.coroutines.launch
 import javax.inject.Inject

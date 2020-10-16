@@ -6,8 +6,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import com.lost.domain.models.Manager
 import com.lost.managers.R
+import com.lost.managers.features.base.BaseFragment
 import com.lost.managers.utils.errors.SnackbarErrorVisualiser
-import com.lost.popeat.features.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.managers.*
 import javax.inject.Inject
