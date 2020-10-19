@@ -1,6 +1,5 @@
 package com.lost.data.datastore
 
-import com.lost.data.api.ManagersApiService
 import com.lost.data.models.ManagersResponse
 import javax.inject.Inject
 
